@@ -7,13 +7,14 @@ import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.JLabel;
+import javax.swing.JPasswordField;
 
 public class LogIn {
 
 	private JFrame frame;
 	private JButton SignInButton;
 	private JTextField textField;
-	private JTextField textField_1;
+	private JPasswordField passwordField;
 
 	/**
 	 * Launch the application.
@@ -43,7 +44,7 @@ public class LogIn {
 	 */
 	private void initialize() {
 		frame = new JFrame();
-		frame.setBounds(100, 100, 432, 564);
+		frame.setBounds(100, 100, 432, 574);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
@@ -72,9 +73,8 @@ public class LogIn {
 		lblNewLabel.setBounds(60, 138, 172, 14);
 		frame.getContentPane().add(lblNewLabel);
 		
-		textField_1 = new JTextField();
-		textField_1.setBounds(60, 163, 314, 20);
-		frame.getContentPane().add(textField_1);
-		textField_1.setColumns(10);
+		passwordField = new JPasswordField();
+		passwordField.setBounds(60, 163, 314, 20);
+		frame.getContentPane().add(passwordField);
 	}
 }
