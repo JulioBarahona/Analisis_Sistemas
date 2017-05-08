@@ -17,5 +17,12 @@ public class Persona {
 	}
 	
 	
+	public Persona(String nombre, String apellido) {
+		super();
+		this.nombre = nombre;
+		this.apellido = apellido;
+	}
+	
+	
 
 }
