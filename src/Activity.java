@@ -1,4 +1,3 @@
-import java.util.Date;
 import java.util.GregorianCalendar;
 
 
@@ -10,11 +9,20 @@ public class Activity {
 	private String activityName;
 	private GregorianCalendar startDate;
 	private GregorianCalendar endDate;
+	private int scholarshipHourWage; 
+	
 	public String getActivityName() {
 		return activityName;
 	}
 	public void setActivityName(String activityName) {
 		this.activityName = activityName;
+	}
+	
+	public int getScholarshipHourWage() {
+		return scholarshipHourWage;
+	}
+	public void setScholarshipHourWage(int scholarshipHourWage) {
+		this.scholarshipHourWage = scholarshipHourWage;
 	}
 	public GregorianCalendar getStartDate() {
 		return startDate;

@@ -1,22 +1,18 @@
 
-public class Organizer {
-	
-	private Persona basicInfo = new Persona("fsdf","dfsdf");
+public class Organizer extends Persona {
+
 	private boolean organizer = true;
-	
-	public Persona getBasicInfo() {
-		return basicInfo;
-	}
-	public void setBasicInfo(Persona basicInfo) {
-		this.basicInfo = basicInfo;
-	}
+
 	public boolean isOrganizer() {
 		return organizer;
 	}
 	public void setOrganizer(boolean organizer) {
 		this.organizer = organizer;
 	}
-	
+	public Organizer(String nombre, String apellido, boolean organizer) {
+		super(nombre, apellido);
+		this.organizer = organizer;
+	}
 	
 	
 }
