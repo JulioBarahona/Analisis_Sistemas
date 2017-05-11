@@ -15,14 +15,8 @@ public class Persona {
 	public void setApellido(String apellido) {
 		this.apellido = apellido;
 	}
-	
-	
-	public Persona(String nombre, String apellido) {
-		super();
-		this.nombre = nombre;
-		this.apellido = apellido;
-	}
-	
+
+	public 
 	
 
 }
