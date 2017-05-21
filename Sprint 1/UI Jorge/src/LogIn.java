@@ -1,3 +1,7 @@
+
+import java.security.Principal;
+import javax.swing.JOptionPane;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -28,10 +32,10 @@ public class LogIn extends javax.swing.JFrame {
 
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
-        jTextField2 = new javax.swing.JTextField();
+        txtuser = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jPasswordField1 = new javax.swing.JPasswordField();
+        txtpassword = new javax.swing.JPasswordField();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -53,12 +57,13 @@ public class LogIn extends javax.swing.JFrame {
         });
         getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 110, -1, -1));
 
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+        txtuser.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
+                txtuserActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 90, 200, -1));
+        getContentPane().add(txtuser, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 90, 200, -1));
+        txtuser.getAccessibleContext().setAccessibleName("txtuser");
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel2.setText("Password:");
@@ -68,29 +73,53 @@ public class LogIn extends javax.swing.JFrame {
         jLabel3.setText("ID:");
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 90, 30, 20));
 
-        jPasswordField1.setText("jPasswordField1");
-        getContentPane().add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 130, 200, -1));
+        txtpassword.setText("contrasenialogin");
+        txtpassword.setToolTipText("");
+        txtpassword.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtpasswordActionPerformed(evt);
+            }
+        });
+        getContentPane().add(txtpassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 130, 200, -1));
+        txtpassword.getAccessibleContext().setAccessibleName("txtpass");
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Jorge\\Desktop\\wallpapers-colors-20.jpg")); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, 0, 550, 330));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // acción de irse al log In
+    
+         String user = txtuser.getText();
+    String pass = txtpassword.getText();
+    
+    if (user.equals ("suc15293") && pass.equals("12346")){
+        this.dispose();
+        MenUser pr = new MenUser ();
+        pr.setVisible(true);
         
-      
+    }
+    
+    if (user.equals ("Douglis") && pass.equals("Barrios")){
+        this.dispose();
+        DirEncar pr = new DirEncar ();
+        pr.setVisible(true);
         
+    }
+    
+    
+    else{
+        /* esto es por si el usuario ingresa un usuario (valga la redundancia) incorrecto o contraseÃ±a
+         */
+        JOptionPane.showMessageDialog(null, "Usuario o contraseña Incorrectos","Error", JOptionPane.ERROR_MESSAGE);
         
-        
-        
+    }
         
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+    private void txtuserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtuserActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
+    }//GEN-LAST:event_txtuserActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         
@@ -98,6 +127,10 @@ public class LogIn extends javax.swing.JFrame {
         a.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void txtpasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtpasswordActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtpasswordActionPerformed
 
     /**
      * @param args the command line arguments
@@ -140,7 +173,7 @@ public class LogIn extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JPasswordField jPasswordField1;
-    private javax.swing.JTextField jTextField2;
+    private javax.swing.JPasswordField txtpassword;
+    private javax.swing.JTextField txtuser;
     // End of variables declaration//GEN-END:variables
 }
